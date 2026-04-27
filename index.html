@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>ether.fi — Design Tokens 2026</title>
+<title>ether.fi — Design System 2026</title>
 <style>
 :root{
   --bg:#0D0B14;--surface:#13101E;--surface2:#1C1829;--surface3:#231E32;
@@ -137,6 +137,10 @@ footer{border-top:1px solid var(--border);padding:32px 40px;display:flex;justify
     <a href="#dimension">Dimension</a>
     <a href="#typography">Typography</a>
     <a href="#breakpoints">Breakpoints</a>
+    <a href="#styles-layout">Styles & Layout</a>
+    <a href="#core-web">Core Web</a>
+    <a href="#marketing">Marketing</a>
+    <a href="#native">Native</a>
   </div>
   <div class="nav-right">
     <div class="pill gold"><span class="dot"></span>In Progress</div>
@@ -617,6 +621,281 @@ footer{border-top:1px solid var(--border);padding:32px 40px;display:flex;justify
         <div class="bp-row"><span class="bp-name">Height/md</span><div class="bp-bar-wrap"><div class="bp-bar" style="width:100%;background:linear-gradient(90deg,var(--lilac),#D9AFFF)"></div></div><span class="bp-val">1024px</span><span class="bp-use">iPad</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ── STYLES + LAYOUT ── -->
+<section class="section" id="styles-layout">
+  <div class="section-head">
+    <div>
+      <div class="section-title">Page 04</div>
+      <div class="section-h">Foundations / Styles + Layout</div>
+    </div>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=3-8" target="_blank" class="pill">Open in Figma ↗</a>
+  </div>
+  <p style="color:var(--muted);font-size:13px;margin-bottom:28px;max-width:680px">Documents all text styles, layout rules and responsive frame templates. Reference page for typography decisions and grid behaviour across breakpoints.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:32px">
+    <div class="token-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px">
+      <div style="font-size:22px;font-weight:600;color:var(--gold);margin-bottom:4px">31</div>
+      <div style="font-size:13px;font-weight:500;margin-bottom:3px">Text Styles</div>
+      <div style="font-size:12px;color:var(--muted)">display · heading · title · body · label · caption</div>
+    </div>
+    <div class="token-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px">
+      <div style="font-size:22px;font-weight:600;color:var(--gold);margin-bottom:4px">12</div>
+      <div style="font-size:13px;font-weight:500;margin-bottom:3px">Frame Layout Variants</div>
+      <div style="font-size:12px;color:var(--muted)">1920 / 1440 / 1280 / 1024 / 768 / 393</div>
+    </div>
+    <div class="token-card" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px">
+      <div style="font-size:22px;font-weight:600;color:var(--gold);margin-bottom:4px">2</div>
+      <div style="font-size:13px;font-weight:500;margin-bottom:3px">Font Families</div>
+      <div style="font-size:12px;color:var(--muted)">Crimson Pro · DM Sans</div>
+    </div>
+  </div>
+
+  <div class="sub-label">Text style groups</div>
+  <div class="t-wrap" style="margin-bottom:24px">
+    <table>
+      <thead><tr><th>Group</th><th>Font</th><th>Sizes (desktop)</th><th>Mobile</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>display/xl–sm</code></td><td style="color:var(--muted)">Crimson Pro · Light</td><td>76 · 48 · 36 · 24px</td><td>44 · 36 · 24 · 20px</td><td style="color:var(--muted);font-size:12px">Marketing hero headings H1–H4</td></tr>
+        <tr><td><code>heading/xl–xs</code></td><td style="color:var(--muted)">Crimson Pro · Light/Regular</td><td>48 · 40 · 36 · 24 · 20px</td><td>40 · 36 · 24 · 18 · 16px</td><td style="color:var(--muted);font-size:12px">Web app page &amp; section headings H1–H5</td></tr>
+        <tr><td><code>title/lg–xs</code></td><td style="color:var(--muted)">DM Sans · SemiBold/Medium</td><td>48 · 40 · 32 · 24px</td><td>—</td><td style="color:var(--muted);font-size:12px">Large numeric values, staking balances</td></tr>
+        <tr><td><code>body/xl–sm</code></td><td style="color:var(--muted)">DM Sans · Regular</td><td>18 · 16 · 14 · 12px</td><td>—</td><td style="color:var(--muted);font-size:12px">All body copy — shared across platforms</td></tr>
+        <tr><td><code>label/medium–xs</code></td><td style="color:var(--muted)">DM Sans · Medium/Regular</td><td>14 · 14 · 12 · 10px</td><td>—</td><td style="color:var(--muted);font-size:12px">Buttons, badges, nav, chips</td></tr>
+        <tr><td><code>caption/regular</code></td><td style="color:var(--muted)">DM Sans · Regular</td><td>12px</td><td>—</td><td style="color:var(--muted);font-size:12px">Helper text, timestamps, form hints</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-label">Layout content frames</div>
+  <div class="t-wrap">
+    <table>
+      <thead><tr><th>Breakpoint</th><th>Width</th><th>Content max-width</th><th>H padding</th><th>Layout type</th></tr></thead>
+      <tbody>
+        <tr><td>Desktop 3xl</td><td>1920px</td><td>1248px centred</td><td>auto</td><td style="color:var(--muted);font-size:12px">Full bleed hero + centred content</td></tr>
+        <tr><td>Desktop 2xl</td><td>1440px</td><td>1248px</td><td>24px</td><td style="color:var(--muted);font-size:12px">Standard desktop</td></tr>
+        <tr><td>Desktop xl</td><td>1280px</td><td>1048px</td><td>24px</td><td style="color:var(--muted);font-size:12px">Compact desktop</td></tr>
+        <tr><td>Desktop lg</td><td>1024px</td><td>976px</td><td>16px</td><td style="color:var(--muted);font-size:12px">Sidebar drops here</td></tr>
+        <tr><td>Tablet md</td><td>768px</td><td>720px</td><td>16px</td><td style="color:var(--muted);font-size:12px">Tablet portrait</td></tr>
+        <tr><td>Mobile xs</td><td>393px</td><td>361px</td><td>16px</td><td style="color:var(--muted);font-size:12px">iPhone</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── CORE WEB ── -->
+<section class="section" id="core-web">
+  <div class="section-head">
+    <div>
+      <div class="section-title">Page 05</div>
+      <div class="section-h">Components / Core Web</div>
+    </div>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=3-9" target="_blank" class="pill">Open in Figma ↗</a>
+  </div>
+  <p style="color:var(--muted);font-size:13px;margin-bottom:28px;max-width:680px">Production-ready components for the web app and shared across platforms. 52 component sets, 1,472 component instances.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:32px">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">52</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Component sets</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">1,638</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Icon variants</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">72</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Button variants</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">1,472</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Total instances</div>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="sub-label">Actions</div>
+  <div class="comp-grid" style="margin-bottom:20px">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=121-50534" target="_blank" class="comp-card"><span>button</span><span class="page-tag">72 variants · 6 types · 3 sizes</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=137-56832" target="_blank" class="comp-card"><span>loading-button</span><span class="page-tag">18 variants · TX confirmation</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=137-56960" target="_blank" class="comp-card"><span>icon-button</span><span class="page-tag">24 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=142-57015" target="_blank" class="comp-card"><span>link-button</span><span class="page-tag">8 variants · inline action</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=132-56510" target="_blank" class="comp-card"><span>circle-button</span><span class="page-tag">9 variants · iOS/Android/mobile</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=216-41610" target="_blank" class="comp-card"><span>back-button</span><span class="page-tag">3 variants</span></a>
+  </div>
+
+  <!-- Icons -->
+  <div class="sub-label">Icons & Assets</div>
+  <div class="comp-grid" style="margin-bottom:20px">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=132-52893" target="_blank" class="comp-card"><span>icons</span><span class="page-tag">1,638 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=151-62966" target="_blank" class="comp-card"><span>asset</span><span class="page-tag">85 variants · token icons</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=151-68193" target="_blank" class="comp-card"><span>network</span><span class="page-tag">54 variants · chain badges</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=151-68514" target="_blank" class="comp-card"><span>state-icon</span><span class="page-tag">6 variants · success/error/warn</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=236-38417" target="_blank" class="comp-card"><span>social-icons</span><span class="page-tag">5 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=288-47688" target="_blank" class="comp-card"><span>icon-level-progress</span><span class="page-tag">3 variants</span></a>
+  </div>
+
+  <!-- Forms -->
+  <div class="sub-label">Forms & Controls</div>
+  <div class="comp-grid" style="margin-bottom:20px">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=146-58071" target="_blank" class="comp-card"><span>input</span><span class="page-tag">14 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=151-68676" target="_blank" class="comp-card"><span>input-amount</span><span class="page-tag">3 variants · stake/unstake</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=146-59065" target="_blank" class="comp-card"><span>textarea</span><span class="page-tag">6 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=156-29531" target="_blank" class="comp-card"><span>select</span><span class="page-tag">4 variants · combobox</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=156-29840" target="_blank" class="comp-card"><span>checkbox</span><span class="page-tag">6 variants + group</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=156-29804" target="_blank" class="comp-card"><span>switch</span><span class="page-tag">2 variants + group</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=157-30707" target="_blank" class="comp-card"><span>radio</span><span class="page-tag">2 variants + group</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=400-2944" target="_blank" class="comp-card"><span>Input-square</span><span class="page-tag">3 variants · OTP / pin</span></a>
+  </div>
+
+  <!-- Navigation -->
+  <div class="sub-label">Navigation & Tabs</div>
+  <div class="comp-grid" style="margin-bottom:20px">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=181-2245" target="_blank" class="comp-card"><span>sidebar</span><span class="page-tag">2 variants + item (8)</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=195-26769" target="_blank" class="comp-card"><span>nav-menu</span><span class="page-tag">4 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=178-35355" target="_blank" class="comp-card"><span>tab-underline</span><span class="page-tag">3 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=178-35358" target="_blank" class="comp-card"><span>tab-pill</span><span class="page-tag">2 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=178-35362" target="_blank" class="comp-card"><span>tab</span><span class="page-tag">3 variants · filled</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=207-39926" target="_blank" class="comp-card"><span>account-menu</span><span class="page-tag">8 variants + dropdown</span></a>
+  </div>
+
+  <!-- Data -->
+  <div class="sub-label">Data Display</div>
+  <div class="comp-grid" style="margin-bottom:20px">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=192-27312" target="_blank" class="comp-card"><span>table</span><span class="page-tag">4 template variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=400-2955" target="_blank" class="comp-card"><span>transaction-row</span><span class="page-tag">13 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=350-38791" target="_blank" class="comp-card"><span>asset-list</span><span class="page-tag">6 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=288-47802" target="_blank" class="comp-card"><span>progress-bar</span><span class="page-tag">8 + 7 gradient variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=157-30759" target="_blank" class="comp-card"><span>badge-membership</span><span class="page-tag">8 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=181-2380" target="_blank" class="comp-card"><span>tag</span><span class="page-tag">7 variants</span></a>
+  </div>
+
+  <!-- Cards & Overlays -->
+  <div class="sub-label">Cards, Overlays & Feedback</div>
+  <div class="comp-grid">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=271-28312" target="_blank" class="comp-card"><span>member-card</span><span class="page-tag">24 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=192-28125" target="_blank" class="comp-card"><span>credit-card</span><span class="page-tag">6 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=328-2908" target="_blank" class="comp-card"><span>mode-card</span><span class="page-tag">4 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=400-13129" target="_blank" class="comp-card"><span>dialog</span><span class="page-tag">5 variants · modal</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=158-31825" target="_blank" class="comp-card"><span>alert</span><span class="page-tag">5 variants · success/warn/error</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=326-29141" target="_blank" class="comp-card"><span>drawer-web</span><span class="page-tag">2 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=400-11787" target="_blank" class="comp-card"><span>overlay-web</span><span class="page-tag">4 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=365-43360" target="_blank" class="comp-card"><span>empty-transactions</span><span class="page-tag">3 variants · empty state</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=272-29326" target="_blank" class="comp-card"><span>modal-card (pay mode)</span><span class="page-tag">8 variants</span></a>
+  </div>
+</section>
+
+<!-- ── MARKETING ── -->
+<section class="section" id="marketing">
+  <div class="section-head">
+    <div>
+      <div class="section-title">Page 06</div>
+      <div class="section-h">Components / Marketing</div>
+    </div>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=3-10" target="_blank" class="pill">Open in Figma ↗</a>
+  </div>
+  <p style="color:var(--muted);font-size:13px;margin-bottom:28px;max-width:680px">Marketing website components — headers, footers, hero sections, feature cards and CTAs. 9 component sets, 115 instances.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">9</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Component sets</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">115</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Instances</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">3</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Breakpoint variants each</div>
+    </div>
+  </div>
+
+  <div class="comp-grid">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=223-30761" target="_blank" class="comp-card"><span>header</span><span class="page-tag">3 variants · desktop/tablet/mobile</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=223-30515" target="_blank" class="comp-card"><span>nav-menu-header</span><span class="page-tag">3 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=236-38451" target="_blank" class="comp-card"><span>footer</span><span class="page-tag">5 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=311-2854" target="_blank" class="comp-card"><span>hero</span><span class="page-tag">3 variants · landing page</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-238" target="_blank" class="comp-card"><span>card-marketing</span><span class="page-tag">5 variants · feature cards</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=237-43328" target="_blank" class="comp-card"><span>faq</span><span class="page-tag">8 variants · accordion</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=324-28558" target="_blank" class="comp-card"><span>cta-marketing</span><span class="page-tag">4 variants · call to action</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=232-31955" target="_blank" class="comp-card"><span>ether.fi-logo</span><span class="page-tag">4 variants · light/dark/icon</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=232-31946" target="_blank" class="comp-card"><span>icon-ether.fi</span><span class="page-tag">3 variants</span></a>
+  </div>
+</section>
+
+<!-- ── NATIVE ── -->
+<section class="section" id="native">
+  <div class="section-head">
+    <div>
+      <div class="section-title">Page 07</div>
+      <div class="section-h">Components / Native</div>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center">
+      <span class="pill" style="color:var(--warning);border-color:rgba(255,225,117,0.3);background:rgba(255,225,117,0.06)"><span class="dot" style="background:var(--warning)"></span>In Progress</span>
+      <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=3-11" target="_blank" class="pill">Open in Figma ↗</a>
+    </div>
+  </div>
+  <p style="color:var(--muted);font-size:13px;margin-bottom:28px;max-width:680px">iOS native components — built on Apple HIG conventions. 24 component sets, 591 instances. Android parity planned as a follow-up phase.</p>
+
+  <div style="background:rgba(255,225,117,0.05);border:1px solid rgba(255,225,117,0.15);border-radius:var(--r);padding:14px 18px;margin-bottom:24px;font-size:13px;color:var(--warning)">
+    ⚠ iOS only at this stage — Android component set not yet started. Shared tokens (color, dimension, typography) apply to both platforms.
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">24</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Component sets</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">591</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Instances</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">44pt</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Min touch target</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;text-align:center">
+      <div style="font-size:28px;font-weight:600;color:var(--gold)">iOS</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Platform · HIG compliant</div>
+    </div>
+  </div>
+
+  <div class="sub-label">Sheets & Overlays</div>
+  <div class="comp-grid" style="margin-bottom:20px">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=319-39580" target="_blank" class="comp-card"><span>sheet</span><span class="page-tag">4 variants · bottom sheet</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=319-40171" target="_blank" class="comp-card"><span>sheet-template</span><span class="page-tag">4 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-10159" target="_blank" class="comp-card"><span>overlay-mobile</span><span class="page-tag">full screen overlay</span></a>
+  </div>
+
+  <div class="sub-label">Keyboard</div>
+  <div class="comp-grid" style="margin-bottom:20px">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-9679" target="_blank" class="comp-card"><span>Keyboard/Default</span><span class="page-tag">4 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-9923" target="_blank" class="comp-card"><span>Keyboard/Input Type</span><span class="page-tag">10 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-9978" target="_blank" class="comp-card"><span>Keyboard/Suggestion</span><span class="page-tag">8 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-10023" target="_blank" class="comp-card"><span>Above Keyboard UI</span><span class="page-tag">4 variants · max amount</span></a>
+  </div>
+
+  <div class="sub-label">Navigation & Tabs</div>
+  <div class="comp-grid" style="margin-bottom:20px">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=314-33773" target="_blank" class="comp-card"><span>tab-iOS</span><span class="page-tag">14 variants · tab bar</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=321-5218" target="_blank" class="comp-card"><span>tab-button-iOS</span><span class="page-tag">4 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-10247" target="_blank" class="comp-card"><span>nav-menu</span><span class="page-tag">2 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=314-35797" target="_blank" class="comp-card"><span>toolbar</span><span class="page-tag">2 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=314-35714" target="_blank" class="comp-card"><span>leading</span><span class="page-tag">2 variants · back nav</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-9009" target="_blank" class="comp-card"><span>hamburger-menu</span><span class="page-tag">4 variants</span></a>
+  </div>
+
+  <div class="sub-label">System UI</div>
+  <div class="comp-grid">
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=314-33415" target="_blank" class="comp-card"><span>iPhone 17 Pro</span><span class="page-tag">3 variants · device frame</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-8973" target="_blank" class="comp-card"><span>ios-template</span><span class="page-tag">2 variants · screen layout</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-10050" target="_blank" class="comp-card"><span>Date picker</span><span class="page-tag">2 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=240-10159" target="_blank" class="comp-card"><span>Wheel-Time</span><span class="page-tag">2 variants</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=321-5799" target="_blank" class="comp-card"><span>page-control</span><span class="page-tag">4 variants · dots</span></a>
+    <a href="https://www.figma.com/design/G4BU1E9Sf100DSAiLqYi3C/?node-id=314-34786" target="_blank" class="comp-card"><span>search-bottom</span><span class="page-tag">search bar</span></a>
   </div>
 </section>
 
